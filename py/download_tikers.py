@@ -1,11 +1,16 @@
+import sys
+sys.path.append("py")
 import requests
 import pandas as pd
 import mysql.connector
 import io
 import requests
+from get_key import get_key
 
 # Clave API de EODHD
-API_KEY = "67cdfe5a569862.10435705"
+
+API_KEY = get_key()
+
 
 # Base de datos MySQL
 MYSQL_CONFIG = {

@@ -1,10 +1,16 @@
+import sys
+sys.path.append("py")
 import mysql.connector
 import requests
 
 cursor = db.cursor()
 
-# Tu API key de EODHD
-API_KEY = "67cdfe5a569862.10435705"
+from get_key import get_key
+
+# Clave API de EODHD
+
+API_KEY = get_key()
+
 BASE_URL = "https://eodhd.com/api/fundamentals/"
 
 # Leer los tickers de la tabla
